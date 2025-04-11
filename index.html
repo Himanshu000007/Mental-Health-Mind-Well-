@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindWell - Mental Health Self-Assessment</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assessment.js"></script>
     <!-- Add Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -126,6 +127,23 @@
                 <p class="text-lg md:text-xl mb-6">Identify your mental health status and get personalized support resources with our easy-to-use self-assessment tool.</p>
                 <a href="#assessment" class="bg-white text-teal-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300 inline-block">Start Assessment</a>
             </div>
+            
+<!-- WHO Mental Health Resources Button -->
+<div class="absolute bottom-8 right-8 z-50">
+    <a href="https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response" 
+       target="_blank"
+       class="group flex items-center gap-2 px-4 py-3 bg-white bg-opacity-80 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-teal-50 border-2 border-teal-500">
+      <div class="w-8 h-8 flex items-center justify-center bg-teal-500 rounded-full text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+        </svg>
+      </div>
+      <span class="font-medium text-gray-800 group-hover:text-teal-700 transition-colors">WHO Mental Health Resources</span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-teal-600 group-hover:translate-x-1 transition-transform">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+      </svg>
+    </a>
+  </div>
         </div>
     </section>
 
@@ -317,36 +335,19 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-12 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Contact Us</h2>
-            <div class="max-w-2xl mx-auto">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="mb-6 text-gray-600">Have questions or need additional support? Reach out to our team using the form below.</p>
-                    <form id="contact-form" class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-gray-700 mb-2">Name</label>
-                            <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-700 mb-2">Message</label>
-                            <textarea id="message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="checkbox" id="consent" class="mr-2">
-                            <label for="consent" class="text-gray-600 text-sm">I consent to having my information stored and used to be contacted regarding my inquiry.</label>
-                        </div>
-                        <button type="submit" class="bg-teal-600 text-white py-3 px-6 rounded-lg hover:bg-teal-700 transition duration-300 w-full">Send Message</button>
-                    </form>
-                </div>
+<!-- Contact Section -->
+<section id="contact" class="py-12 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Contact Us</h2>
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-6 text-gray-600">Have questions or need additional support? Our team is here to help you with any inquiries about mental health resources and services.</p>
+                <p class="mb-8 text-gray-600">Click below to visit our contact page where you can find multiple ways to reach us, including our contact form, phone numbers, email addresses, and our physical location.</p>
+                <a href="contact.html" class="inline-block bg-teal-600 text-white py-3 px-6 rounded-lg hover:bg-teal-700 transition duration-300">Contact Our Team</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
