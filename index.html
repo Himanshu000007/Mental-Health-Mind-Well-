@@ -8,7 +8,7 @@
     <script src="assessment.js"></script>
     <!-- Add Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <style>
         .question-card {
             transition: all 0.3s ease;
@@ -78,7 +78,7 @@
 <body class="bg-gray-50 font-sans">
     <!-- Navigation Bar -->
     <nav class="bg-teal-600 text-white shadow-lg fixed top-0 w-full z-50">
-        <div class="container mx-auto px-4 py-3">
+        <div class="container px-4 mx-auto py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-brain text-2xl"></i>
@@ -86,6 +86,7 @@
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="hover:text-teal-200 transition duration-300">Home</a>
+                    <a href="courses.html" class="hover:text-teal-200 transition duration-300">Courses</a>
                     <a href="#about" class="hover:text-teal-200 transition duration-300">About</a>
                     <a href="#assessment" class="hover:text-teal-200 transition duration-300">Assessment</a>
                     <a href="#resources" class="hover:text-teal-200 transition duration-300">Resources</a>
@@ -102,6 +103,7 @@
         <div id="mobile-menu" class="md:hidden hidden bg-teal-700 pb-4">
             <div class="container mx-auto px-4 flex flex-col space-y-3">
                 <a href="#home" class="block py-2 hover:text-teal-200 transition duration-300">Home</a>
+                <a href="courses.html" class="block py-2 hover:text-teal-200 transition duration-300">Courses</a>
                 <a href="#about" class="block py-2 hover:text-teal-200 transition duration-300">About</a>
                 <a href="#assessment" class="block py-2 hover:text-teal-200 transition duration-300">Assessment</a>
                 <a href="#resources" class="block py-2 hover:text-teal-200 transition duration-300">Resources</a>
@@ -119,7 +121,9 @@
         </video>
         
         <!-- Overlay for better text visibility -->
-        <div class="overlay"></div>
+        <div class="overlay "></div>
+        <!-- <div class="overlay  inset-0 bg-black bg-opacity-50 z-50"></div> -->
+
         
         <div class="container mx-auto px-4 relative z-10 h-full flex items-center">
             <div class="md:w-1/2 pt-16">
