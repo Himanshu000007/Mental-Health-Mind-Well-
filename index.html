@@ -6,8 +6,22 @@
     <title>MindWell - Mental Health Self-Assessment</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assessment.js"></script>
+    <script src="theme.js"></script>
     <!-- Add Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Configure Tailwind dark mode
+        tailwind.config = {
+          darkMode: 'class', // This enables class-based dark mode
+          theme: {
+            extend: {
+              colors: {
+                // You can customize your dark mode colors here
+              }
+            }
+          }
+        }
+      </script>
     
     <style>
         .question-card {
@@ -73,7 +87,90 @@
             width: 100%;
             z-index: 50;
         }
-    </style>
+
+    
+          /* Dark mode transitions */
+          html.dark {
+            color-scheme: dark;
+          }
+          
+          html {
+            transition: background-color 0.3s ease, color 0.3s ease;
+          }
+          
+          /* Dark mode classes for your website */
+          .dark body {
+            background-color: #111827; /* bg-gray-900 */
+            color: #f3f4f6; /* text-gray-100 */
+          }
+          
+          .dark .bg-white {
+            background-color: #1f2937; /* bg-gray-800 */
+          }
+          
+          .dark .bg-gray-50 {
+            background-color: #374151; /* bg-gray-700 */
+          }
+          
+          .dark .bg-gray-100 {
+            background-color: #1f2937; /* bg-gray-800 */
+          }
+          
+          .dark .text-gray-800 {
+            color: #f3f4f6; /* text-gray-100 */
+          }
+          
+          .dark .text-gray-600 {
+            color: #d1d5db; /* text-gray-300 */
+          }
+          
+          .dark .border-gray-700 {
+            border-color: #4b5563; /* border-gray-600 */
+          }
+          
+          /* Resource cards in dark mode */
+          .dark .resource-card {
+            background-color: #374151; /* bg-gray-700 */
+            color: #e5e7eb; /* text-gray-200 */
+          }
+          
+          /* Override background colors for the assessment section */
+          .dark #assessment-results .bg-gray-50,
+          .dark #results-summary.bg-gray-50 {
+            background-color: #374151; /* bg-gray-700 */
+          }
+          
+          /* Crisis support alert in dark mode */
+          .dark .bg-red-50 {
+            background-color: rgba(127, 29, 29, 0.3); /* bg-red-900 with opacity */
+          }
+          
+          .dark .text-red-700 {
+            color: #fca5a5; /* text-red-300 */
+          }
+          
+          /* Yellow alert in dark mode */
+          .dark .bg-yellow-50 {
+            background-color: rgba(120, 53, 15, 0.3); /* bg-yellow-900 with opacity */
+          }
+          
+          .dark .text-yellow-700 {
+            color: #fcd34d; /* text-yellow-300 */
+          }
+          
+          /* Form elements in dark mode */
+          .dark input[type="email"] {
+            background-color: #374151; /* bg-gray-700 */
+            color: white;
+            border-color: #4b5563; /* border-gray-600 */
+          }
+          
+          /* Video overlay in dark mode */
+          .dark .overlay {
+            background: linear-gradient(to right, rgba(13, 148, 136, 0.9), rgba(59, 130, 246, 0.9));
+          }
+        </style>
+    
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Navigation Bar -->
@@ -91,6 +188,11 @@
                     <a href="#assessment" class="hover:text-teal-200 transition duration-300">Assessment</a>
                     <a href="#resources" class="hover:text-teal-200 transition duration-300">Resources</a>
                     <a href="#contact" class="hover:text-teal-200 transition duration-300">Contact</a>
+                    <button id="theme-toggle" class="focus:outline-none">
+                        <i id="theme-toggle-dark-icon" class="fas fa-moon text-xl hidden"></i>
+                        <i id="theme-toggle-light-icon" class="fas fa-sun text-xl"></i>
+                            ThemE
+                    </button>
                 </div>
                 <div class="md:hidden">
                     <button id="menu-toggle" class="focus:outline-none">
@@ -111,6 +213,7 @@
             </div>
         </div>
     </nav>
+
 
     <!-- Hero Section with Full-Screen Video Background -->
     <section id="home" class="h-screen text-white relative">
